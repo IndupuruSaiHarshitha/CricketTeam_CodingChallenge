@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <a routerLink="/players" class="nav-brand">Cricket Players App</a>
+  <div class="nav-links">
+    <a routerLink="/players" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Players List</a>
+    <a routerLink="/players/add" routerLinkActive="active-link">Add New Player</a>
+  </div>
+</nav>
+
+<div class="main-content">
+  <router-outlet></router-outlet> </div>

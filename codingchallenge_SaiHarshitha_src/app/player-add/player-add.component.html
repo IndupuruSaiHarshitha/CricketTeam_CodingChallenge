@@ -1,0 +1,45 @@
+<div class="player-form-container">
+  <h2>Add New Player</h2>
+  <form (ngSubmit)="addPlayer()" #playerForm="ngForm">
+    <div class="form-group">
+      <label for="playerName">Player Name:</label>
+      <input id="playerName" type="text" [(ngModel)]="newPlayer.playerName" name="playerName" required minlength="3" #playerName="ngModel">
+      <span style="color: red;" *ngIf="playerName.touched && playerName.invalid">Player Name is mandatory or too short.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="jerseyNumber">Jersey Number:</label>
+      <input id="jerseyNumber" type="number" [(ngModel)]="newPlayer.jerseyNumber" name="jerseyNumber" required min="1" #jerseyNumber="ngModel">
+      <span style="color: red;" *ngIf="jerseyNumber.touched && jerseyNumber.invalid">Jersey Number is mandatory or invalid.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <input id="role" type="text" [(ngModel)]="newPlayer.role" name="role" required #role="ngModel">
+      <span style="color: red;" *ngIf="role.touched && role.invalid">Role is mandatory.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="teamName">Team Name:</label>
+      <select id="teamName" [(ngModel)]="newPlayer.teamName" name="teamName" required #teamName="ngModel">
+        <option value="">-- Select Team --</option>
+        <option value="rcb">RCB</option>
+        <option value="mi">MI</option>
+        <option value="srh">SRH</option>
+        <option value="csk">CSK</option>
+        <option value="dc">DC</option>
+        <option value="kkr">KKR</option>
+        <option value="pbks">PBKS</option>
+        <option value="rr">RR</option>
+        <option value="lsg">LSG</option>
+        <option value="gt">GT</option>
+      </select>
+      <span style="color: red;" *ngIf="teamName.touched && teamName.invalid">Team Name is mandatory.</span>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="submit-btn">Add Player</button>
+      <button type="button" (click)="goBack()" class="cancel-btn">Back to List</button>
+    </div>
+  </form>
+</div>
