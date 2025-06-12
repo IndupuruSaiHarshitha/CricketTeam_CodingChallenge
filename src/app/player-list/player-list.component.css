@@ -1,0 +1,62 @@
+
+/* Container spacing and background */
+.container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15); /* soft blue shadow */
+}
+
+/* Style for the table */
+.table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e3f2fd; /* Bootstrap light blue */
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Table header styling */
+.table th {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* Table data cell styling */
+.table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/* Zebra stripe rows */
+.table tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+/* Delete button styling */
+.btn-danger {
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+/* Add hover effect for delete button */
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Responsive table on small screens */
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table th, .table td {
+    padding: 8px;
+  }
+}

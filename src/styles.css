@@ -1,0 +1,83 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #8ddb59;
+  color: #212529; /* Ensures readable text */
+}
+
+/* Main Navbar Styling */
+.navbar.bg-primary {
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(97, 166, 7, 0.2);
+}
+
+/* Nav Link Styling */
+.navbar .nav-link {
+  font-weight: 500;
+  color: #19219b !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important; /* Yellow hover */
+}
+
+/* Nested Navbar for Search */
+.navbar-light.bg-light {
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+/* Search Form Styling */
+form.d-flex {
+  align-items: center;
+}
+
+form.d-flex .form-control {
+  width: 200px;
+  transition: width 0.3s ease-in-out;
+  color: white;              /* Text color in input */
+  background-color: #d5d5e1;   /* White background */
+  border: 1px solid #ced4da;   /* Border color */
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+form.d-flex .form-control:focus {
+  width: 250px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder Styling */
+form.d-flex .form-control::placeholder {
+  color: #6c757d;
+}
+
+/* Search Button Styling */
+form.d-flex .btn {
+  padding: 6px 12px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar .nav-item {
+    margin-bottom: 10px;
+  }
+
+  form.d-flex {
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  form.d-flex .form-control,
+  form.d-flex .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

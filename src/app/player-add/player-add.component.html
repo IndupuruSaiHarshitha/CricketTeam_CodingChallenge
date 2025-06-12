@@ -1,0 +1,35 @@
+<p>addplayer works!</p>
+
+
+<form  #myform="ngForm"  method="post"  class="container col-md-4" (ngSubmit)="addPlayer(myform.value)">
+    <!-- <div class="form-group">
+    <label>Eid:</label><input type="number" class="form-control"  name="id"  #eidcontrol="ngModel"   required  ngModel>
+    <span  style="color: red;"  *ngIf="eidcontrol.touched && eidcontrol.invalid">Eid is Mandatory</span>
+    </div> -->
+    
+    <div class="form-group">
+    <label>PlayerName:</label><input type="text" class="form-control"  #playerNamecontrol="ngModel" name="playerName"  required ngModel>
+    <span  style="color: red;"  *ngIf="playerNamecontrol.touched && playerNamecontrol.invalid">Player Name is Mandatory</span>
+    </div>
+    
+    
+    <div class="form-group">
+    <label>JerseyNumber:</label><input type="number"  class="form-control" #jerseyNumbercontrol="ngModel" name="jerseyNumber"  required ngModel>
+    <span  style="color: red;"  *ngIf="jerseyNumbercontrol.touched && jerseyNumbercontrol.invalid">Jersey is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Role:</label><input type="text"  class="form-control" #rolecontrol="ngModel" name="role"  required ngModel>
+        <span  style="color: red;"  *ngIf="rolecontrol.touched && rolecontrol.invalid">Role is Mandatory</span>
+        </div>
+    <div class="form-group">
+        <label>TeamName:</label><input type="text"  class="form-control" #teamNamecontrol="ngModel" name="teamName"  required ngModel>
+        <span  style="color: red;"  *ngIf="teamNamecontrol.touched && teamNamecontrol.invalid">TeamName is Mandatory</span>
+        </div>  
+    
+    
+    <button type="submit"  class="btn btn-primary" [disabled]="myform.invalid" >Submit</button>
+    
+    
+    </form>
+    

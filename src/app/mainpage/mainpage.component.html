@@ -1,0 +1,41 @@
+
+<p>dashboard works!</p>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-6">
+    <div class="container-fluid">
+     
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="player-add">AddPlayer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="player-list">View All</a>
+          </li>
+        </ul>
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <form class="d-flex"  (ngSubmit)="searchPlayer()">
+              <input class="form-control me-2" type="search" [(ngModel)]="teamName" name="teamName"  placeholder="Search by team name" required />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <router-outlet></router-outlet>
+
+
+ 
